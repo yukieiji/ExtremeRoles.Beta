@@ -1,6 +1,8 @@
-﻿using ExtremeRoles.Extension.Controller;
+﻿using HarmonyLib;
+
 using ExtremeRoles.Module;
-using HarmonyLib;
+using ExtremeRoles.Extension.Controller;
+using ExtremeRoles.Extension.UnityEvents;
 
 using UnityEngine;
 
