@@ -53,10 +53,14 @@ public sealed class RaiseHandSystemToggle : IDirtableSystemType
 
         this.raiseHandButton.ClickedEvent.AddListener(() =>
         {
+            byte playerId = CachedPlayerControl.LocalPlayer.PlayerId;
+            this.raiseHandButton.DefaultImgColor =
+                this.raisedHand.Contains(playerId) ? Color.white : Color.yellow;
+
             ExtremeSystemTypeManager.RpcUpdateSystemOnlyHost(
                 Type, (x) =>
                 {
-                    x.Write(CachedPlayerControl.LocalPlayer.PlayerId);
+                    x.Write(playerId);
                 });
         });
     }
