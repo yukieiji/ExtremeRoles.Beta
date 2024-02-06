@@ -41,8 +41,10 @@ public sealed class RaiseHandSystemToggle : IRaiseHandSystem
         this.raiseHandButton.ClickedEvent.AddListener(() =>
         {
             byte playerId = CachedPlayerControl.LocalPlayer.PlayerId;
-            this.raiseHandButton.DefaultImgColor =
-                this.raisedHand.Contains(playerId) ? Color.white : Color.yellow;
+            var tagetColor = this.raisedHand.Contains(playerId) ? Color.white : Color.yellow; ;
+
+            this.raiseHandButton.DefaultImgColor = tagetColor;
+            this.raiseHandButton.DefaultTextColor = tagetColor;
 
             ExtremeSystemTypeManager.RpcUpdateSystemOnlyHost(
                 Type, (x) =>
