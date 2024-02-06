@@ -20,7 +20,7 @@ public class BetaContentManager
 		string content = curLang switch
 		{
 			SupportedLangs.Japanese =>
-				"・役職説明のテキストの改善/変更\n・フィードバックシステムの追加",
+				"・役職説明のテキストの改善/変更\n・フィードバックシステムの追加\n・「挙手する」ボタンをトグル式に変更",
 			_ => "",
 		};
 		transData.Add(TransKey, content);
