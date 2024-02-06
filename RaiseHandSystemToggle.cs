@@ -13,7 +13,7 @@ using Behavior = ExtremeRoles.Module.SystemType.RaiseHandSystem.Behavior;
 
 namespace ExtremeRoles.Beta;
 
-public sealed class RaiseHandSystemToggle : IDirtableSystemType
+public sealed class RaiseHandSystemToggle : IDirtableSystemType, IRaiseHandSystem
 {
     public bool IsInit => this.raiseHandButton != null;
     public const ExtremeSystemType Type = ExtremeSystemType.RaiseHandSystem;
@@ -24,19 +24,6 @@ public sealed class RaiseHandSystemToggle : IDirtableSystemType
     private SimpleButton? raiseHandButton = null;
 
     public bool IsDirty { get; private set; }
-
-    public static RaiseHandSystemToggle Get()
-    {
-        var systemMng = ExtremeSystemTypeManager.Instance;
-        if (!systemMng.TryGet<RaiseHandSystemToggle>(Type, out var sytem) ||
-            sytem == null)
-        {
-            sytem = new RaiseHandSystemToggle();
-            systemMng.TryAdd(Type, sytem);
-        }
-
-        return sytem;
-    }
 
     public void CreateRaiseHandButton()
     {
