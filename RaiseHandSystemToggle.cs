@@ -13,7 +13,7 @@ using Behavior = ExtremeRoles.Module.SystemType.RaiseHandSystem.Behavior;
 
 namespace ExtremeRoles.Beta;
 
-public sealed class RaiseHandSystemToggle : IDirtableSystemType, IRaiseHandSystem
+public sealed class RaiseHandSystemToggle : IRaiseHandSystem
 {
     public bool IsInit => this.raiseHandButton != null;
     public const ExtremeSystemType Type = ExtremeSystemType.RaiseHandSystem;
