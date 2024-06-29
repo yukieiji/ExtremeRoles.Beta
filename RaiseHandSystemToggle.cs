@@ -40,7 +40,7 @@ public sealed class RaiseHandSystemToggle : IRaiseHandSystem
 
         this.raiseHandButton.ClickedEvent.AddListener(() =>
         {
-            byte playerId = CachedPlayerControl.LocalPlayer.PlayerId;
+            byte playerId = PlayerControl.LocalPlayer.PlayerId;
             var tagetColor = this.raisedHand.Contains(playerId) ? Color.white : Color.yellow; ;
 
             this.raiseHandButton.DefaultImgColor = tagetColor;
