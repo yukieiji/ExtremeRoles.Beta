@@ -27,7 +27,7 @@ public sealed class RaiseHandSystemToggle : IRaiseHandSystem
 
     public void CreateRaiseHandButton()
     {
-        this.raiseHandButton = Resources.Loader.CreateSimpleButton(
+        this.raiseHandButton = Resources.UnityObjectLoader.CreateSimpleButton(
             MeetingHud.Instance.transform);
 
         this.raiseHandButton.Text.text = "挙手する";

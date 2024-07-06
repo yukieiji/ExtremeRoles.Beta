@@ -15,7 +15,7 @@ public static class FeedBackSystem
 	{
 		if (!PublicBeta.Instance.IsEnableWithMode) { return; }
 
-		var button = Resources.Loader.CreateSimpleButton(
+		var button = Resources.UnityObjectLoader.CreateSimpleButton(
 			__instance.ExitButton.transform);
 
         button.ClickedEvent.AddListener(
