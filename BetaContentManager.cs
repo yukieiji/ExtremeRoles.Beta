@@ -6,7 +6,7 @@ namespace ExtremeRoles.Beta;
 
 public class BetaContentManager
 {
-	public const string Version = "1.0.1";
+	public const string Version = "1.0.2";
 
 	public const string NewTransDataPath = "ExtremeRoles.Beta.Resources.JsonData.TextRevamp.json";
 
@@ -20,7 +20,7 @@ public class BetaContentManager
 		string content = curLang switch
 		{
 			SupportedLangs.Japanese =>
-				"・役職説明のテキストの改善/変更\n・フィードバックシステムの追加\n・「挙手する」ボタンをトグル式に変更",
+				"・フィードバックシステムの追加\n・「挙手する」ボタンをトグル式に変更",
 			_ => "",
 		};
 		transData.Add(TransKey, content);
